@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/stlye.css'%}"/>
+
+    
+
+</head>
+<body>
+    <style>
+        h1{
+            color: darkblue;
+            text-align: left;
+        }
+        
+        form{
+            text-align: left;
+        }
+        body{
+            background:palevioletred;
+        }
+    </style>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <form method="POST">
+        {{form.as_p}}
+    </form>
+    
+
+</body>
+</html>
