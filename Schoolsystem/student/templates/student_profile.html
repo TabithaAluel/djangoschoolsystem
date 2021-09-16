@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <form action="">
+        <img  class="round" id="w" src="{{ student.profile_pic.url }}" width="60px" height="60px">
+      
+
+    <h2>{{student.full_name}}</h2>
+    <h6>Age:{{student.age}} years old</h6>
+    <h6>PhoneNumber:{{student.phone_number}}</h6>
+    <h6>Country:{{student.country}}</h6>
+    <h6>Id:{{student.national_id}}</h6>
+    <h5>Email:{{student.email_address}}</h5>
+
+
+</form>
+<style>
+    .round {
+width: 150px;
+border-radius: 100%;
+} 
+    h5{
+        color:yellowgreen;
+        font: 1em sans-serif;
+        font-size: 13px;
+    }
+    /* body{
+        font-family:'Gotham Ultra', sans-serif ;
+    } */
+    body{
+        font-family: 'Aurulent Sans', sans-serif;
+
+    }
+                                                                   
+    h2{
+        color: yellowgreen;
+    }
+    h6{
+        color:whitesmoke;
+        font-size: 18px;
+    }
+    
+    form{
+            
+            background-color:midnightblue;
+            margin-left: 100px;
+            width: 200px;
+            padding: 100px;
+            font-size: 20px;
+            border-radius: 20px; 
+            margin-right: 300px;
+            border-radius: 30px;
+            font-size: 24px;
+
+
+        }
+        img{
+            border-radius: 30px;
+        }
+        #w{
+            border-radius: 12;
+            width: 200px;
+            height: 200px;
+        }
+                                                
+    
+        
+    
+</style>
+
+
+    
+</body>
+</html>

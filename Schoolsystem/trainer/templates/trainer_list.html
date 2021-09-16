@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <li><a href="{% url 'home_view' %}">Home</a></li>
+
+    <img class="imge" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmQdqUSeJcVCyV9BZkMZxINebBzHq2FyU3FA&usqp=CAU
+    ">
+    <style>
+        .imge{
+            padding-left: 400px;
+        }
+
+        .table{
+            width: 100%;
+          }
+          .table td, #table th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            .table tr:nth-child(even){background-color: #F2F2F2;}
+            .table tr:hover {background-color: #ddd;}
+            .table th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: midnightblue;
+                color: white;
+                font-family:sans-serif;
+            }
+            body{
+        font-family: 'Aurulent Sans', sans-serif;
+
+    }
+   
+        </style>
+
+
+    <table class="table">
+        
+        <tr>
+            <th>profile</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>age</th>
+            <th>date of birth</th>
+            <th>gender</th>
+            <th>courses</th>
+            <th>email address</th>
+            <th>profile</th>
+            <th>Edit</th>
+
+
+        </tr>
+
+        {% for trainer in trainers %}
+       
+        <tr>
+        {% if trainer.profile %}
+        <td><img src="{{trainer.profile.url}}" width="60px" height="60px"></td>
+        {% endif %}
+        <td>{{ trainer.first_name }}</td>
+        <td>{{ trainer.last_name }}</td>
+        <td>{{ trainer.age }}</td>
+        <td>{{ trainer.date_of_birth }}</td>
+        <td>{{ trainer.gender }}</td>
+        <td>{{ trainer.Courses }}</td>
+        <td>{{ trainer.email_Address }}</td> 
+       
+
+        <td><a href="{% url 'trainer_profile' id=trainer.id%}">profile</a></td>
+             
+        <td><a href="{% url 'edit_trainer' id=trainer.id%}">Edit</a></td>
+       
+
+        
+    </tr>
+    
+    {% endfor %}
+    </table>
+    
+</body>
+</html>
